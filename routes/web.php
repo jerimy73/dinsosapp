@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\CustomerController;
+
 use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\IndonesiaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,11 +13,11 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/employee', [EmployeeController::class,'index']);
-// Route::get('/customer/create', [CustomerController::class,'create']);
-// Route::get('/customer/{id}', [CustomerController::class,'edit']);
-// Route::post('/customer', [CustomerController::class,'store']);
-// Route::put('/customer/{id}', [CustomerController::class,'update']);
-// Route::delete('/customer/{id}', [CustomerController::class,'destroy']);
+Route::get('/employee/create', [EmployeeController::class,'create']);
+Route::get('/employee/{id}', [EmployeeController::class,'edit']);
+Route::post('/employee', [EmployeeController::class,'store']);
+Route::put('/employee/{id}', [EmployeeController::class,'update']);
+Route::delete('/employee/{id}', [EmployeeController::class,'destroy']);
 
 
 // Route::get('province', [IndonesiaController::class,'province'])->name('province.index');

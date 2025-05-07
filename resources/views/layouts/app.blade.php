@@ -34,6 +34,7 @@
                 <!-- End of Footer -->
             </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
         <script src="{{ asset('template/js/scripts.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
@@ -41,6 +42,27 @@
         <script src="{{ asset('template/assets/demo/chart-bar-demo.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="{{ asset('template/js/datatables-simple-demo.js')}}"></script>
+        
+        <!-- personal script -->
+         <script>
+            $("#asn_type").on("change", function(){
+                let asn_type = $("#asn_type").val();
+
+                if(asn_type == 'PNS'){
+                    $("#NIP").show();
+                    $("#labelNIP").text("NIP");
+                    $("#nip").val('');
+                }else if(asn_type == 'PPPK'){
+                    $("#NIP").show();
+                    $("#labelNIP").text("NI PPPK");
+                    $("#nip").val('');
+                }else if(asn_type == 'non-ASN'){
+                    $("#NIP").hide();
+                    $("#nip").val('-');
+                }
+                
+            });
+         </script>
     </body>
 </html>
 b

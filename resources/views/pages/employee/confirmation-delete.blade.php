@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div class="modal fade" id="confirmationDelete-{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="confirmationDeleteTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <form action="/customer/{{ $item->id }}" method="post">
+    <form action="/employee/{{ $item->id }}" method="post">
         @csrf
         @method('DELETE')
         <div class="modal-content">
