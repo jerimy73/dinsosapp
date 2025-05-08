@@ -14,7 +14,7 @@ class Pangkat extends Seeder
     public function run(): void
     {
 
-        $createMultipleUsers = [
+        $createMultiple = [
             ['name' => 'Pengatur Muda, II/a','asn_type' => 'PNS'],
             ['name' => 'Pengatur Muda Tk. I, II/b','asn_type' => 'PNS'],
             ['name' => 'Pengatur, II/c','asn_type' => 'PNS'],
@@ -42,7 +42,7 @@ class Pangkat extends Seeder
             ['name' => 'XVI','asn_type' => 'PPPK'],
         ];
             
-        DB::table('pangkats')->insert($createMultipleUsers);
+        DB::table('pangkats')->insert($createMultiple);
     }
 }
 

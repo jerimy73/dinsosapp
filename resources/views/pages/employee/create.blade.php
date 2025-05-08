@@ -9,8 +9,8 @@
             @csrf
             @method('POST')
              
-            <div class="card shadow mb-4 mt-4">
-                <div class="card-header bg-black py-3">
+            <div class="card shadow mb-4">
+                <div class="card-header bg-primary py-3">
                     <h4 class="m-0 font-weight-bold text-white">Tambah Data Pegawai</h4>
                 </div>
                 <div class="card-body">
@@ -35,11 +35,11 @@
                             <select name="gender" id="gender" class="col-3 form-control">
                                 @foreach ([
                                     (object)[
-                                        "label"=> "Laki-Laki",
+                                        "label"=> "L",
                                         "value" => "male",
                                     ],
                                     (object)[
-                                        "label"=> "Perempuan",
+                                        "label"=> "P",
                                         "value" => "female",
                                     ],
                                 ] as $item)

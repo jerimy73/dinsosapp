@@ -17,7 +17,7 @@
 <div class="card shadow mb-4">
     <div class="card-body">
         <div class="table-responsive">
-            <table id="datatablesSimple" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th width="5%">Status</th>
@@ -54,12 +54,14 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="/employee/{{ $item->id }}">
-                                    <i class="fa-regular fa-eye"></i>
-                                </a>
-                                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#confirmationDelete-{{ $item->id }}">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
+                                <div class="d-flex">
+                                    <a href="/employee/{{ $item->id }}" class="d-inline-block mr-3 btn btn-sm btn-primary">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#confirmationDelete-{{ $item->id }}">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                         @include('pages.employee.confirmation-delete')
