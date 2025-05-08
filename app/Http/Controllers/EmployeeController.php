@@ -81,9 +81,11 @@ class EmployeeController extends Controller
     public function edit($id)
     {
         $employee = Employee::findOrFail($id);
+        $pangkats = Pangkat::all();
 
         return view('pages.employee.edit', [
             'employee' => $employee,
+            'pangkats' => $pangkats,
         ]);
     }
 

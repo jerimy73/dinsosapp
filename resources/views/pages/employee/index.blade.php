@@ -38,8 +38,29 @@
                             <td>{{$item->nip}}</td>
                             <td>{{$item->jobdesc}}</td>
                             <td>{{ $item->pangkat }}</td>
-                            <td>{{ $item->placement }}</td>
-                            <td>edit | delete</td>
+                            <td>
+                                @if ($item->placement == 'dayalinjamsos')
+                                    Bidang Dayalinjamsos
+                                @elseif($item->placement == 'rehsos')
+                                    Bidang Rehabilitasi Sosial
+                                @elseif($item->placement == 'pm')
+                                    Bidang PM
+                                @elseif($item->placement == 'pemdes')
+                                    Bidang Pemdes
+                                @elseif($item->placement == 'sekretariat')
+                                    Sekretariat
+                                @else($item->placement == 'kadis')
+                                    Kepala Dinas
+                                @endif
+                            </td>
+                            <td>
+                                <a href="/employee/{{ $item->id }}">
+                                    <i class="fa-regular fa-eye"></i>
+                                </a>
+                                <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#confirmationDelete-{{ $item->id }}">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
                         </tr>
                         @include('pages.employee.confirmation-delete')
                     @endforeach

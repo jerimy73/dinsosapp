@@ -7,16 +7,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                     Dashboard
                 </a>
-                <div class="sb-sidenav-menu-heading">Database</div>
-                <a class="nav-link" href="/employee">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-user-tie"></i></div>
-                    Pegawai
-                </a>
-                <a class="nav-link" href="/user">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-users-gear"></i></div>
-                    Akun 
-                </a>
-                <div class="sb-sidenav-menu-heading">Fitur</div>
+                <div class="sb-sidenav-menu-heading">Main Menu</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseKeputusan" aria-expanded="false" aria-controls="collapseKeputusan">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-gavel"></i></div>
                     Keputusan
@@ -51,7 +42,15 @@
                         <a class="nav-link" href="/peraturan-daerah">Peraturan Daerah</a>
                     </nav>
                 </div>
-                
+                <div class="sb-sidenav-menu-heading">Database</div>
+                <a class="nav-link" href="/employee">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    Pegawai
+                </a>
+                <a class="nav-link" href="/user">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-users-gear"></i></div>
+                    Akun 
+                </a>               
             </div>
         </div>
         <div class="sb-sidenav-footer">
